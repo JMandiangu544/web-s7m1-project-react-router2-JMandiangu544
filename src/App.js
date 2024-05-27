@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import movie from './Movies/Movie'
 import MovieList from './Movies/MovieList'
 import SavedList from './Movies/SavedList';
+import Movie from './Movies/Movie';
 
 export default function App () {
   const [saved, setSaved] = useState([]); // Stretch: the ids of "saved" movies
@@ -35,7 +36,7 @@ export default function App () {
 
       <Routes>
         <Route path="/" element={<MovieList movies={movies}/>} />
-        <Route path="movies/:id" element={<movies /> } />
+        <Route path="movies/:id" element={<Movie /> } />
       </Routes>
     </div>
   );
